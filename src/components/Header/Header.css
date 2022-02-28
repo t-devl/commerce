@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.header__basket-button {
+  display: flex;
+  align-items: baseline;
+  border: none;
+  background: none;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+.header__basket-icon {
+  margin-right: 0.1rem;
+  font-size: 1.25rem;
+}

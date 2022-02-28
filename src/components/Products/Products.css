@@ -1,0 +1,15 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
+  gap: 1rem;
+  min-width: 280px;
+  padding: 1rem 0;
+}
+
+@media (min-width: 310px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    padding: 1rem 2rem;
+  }
+}

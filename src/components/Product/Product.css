@@ -1,0 +1,38 @@
+.product {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0px lightgrey;
+  background-color: white;
+}
+
+.product__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 200px;
+  padding: 0.5rem 1rem;
+}
+
+.product__image-container {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  padding: 0.5rem;
+}
+
+.product__name {
+  font-size: 1rem;
+}
+
+.product__description {
+  margin: 1rem 0;
+  color: rgb(109, 109, 109);
+  font-size: 0.9rem;
+}
+
+.product__button {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid black;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+}
