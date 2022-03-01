@@ -1,0 +1,68 @@
+.delivery__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.delivery__title::after {
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.form {
+  width: 270px;
+}
+
+.form__group {
+  margin-bottom: 0.75rem;
+}
+
+.form__label {
+  display: block;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.form__input--town {
+  width: 75%;
+}
+
+.form__input--postcode {
+  width: 50%;
+}
+
+.form__buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__button--back {
+  border: 1px solid var(--blue);
+  background-color: white;
+  color: var(--blue);
+}
+
+.form__button--next {
+  border: none;
+  background-color: var(--blue);
+  color: white;
+}

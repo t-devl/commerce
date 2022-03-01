@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Basket.css";
 
 export default function Basket({
@@ -64,6 +65,17 @@ export default function Basket({
           ))}
         </>
       )}
+      <div className="basket__checkout">
+        <div className="basket__subtotal">
+          Subtotal:{" "}
+          <span className="basket__subtotal-value">
+            {basket.subtotal.formatted_with_symbol}
+          </span>
+        </div>
+        <Link className="basket__checkout-button" to="/checkout">
+          Checkout
+        </Link>
+      </div>
     </div>
   );
 }

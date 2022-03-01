@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Basket from "./components/Basket/Basket";
+import Checkout from "./components/Checkout/Checkout";
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
 
@@ -59,6 +60,7 @@ function App() {
               />
             }
           />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
     </Router>

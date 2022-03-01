@@ -71,3 +71,26 @@
   color: white;
   cursor: pointer;
 }
+
+.basket__checkout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.basket__subtotal {
+  font-weight: bold;
+  margin-right: calc(2rem - 7px);
+}
+
+.basket__checkout-button {
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 13.3333px;
+  text-decoration: none;
+  cursor: pointer;
+}
