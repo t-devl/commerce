@@ -4,13 +4,6 @@
   background-color: white;
 }
 
-.product__body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 200px;
-  padding: 0.5rem 1rem;
-}
-
 .product__image-container {
   display: flex;
   justify-content: center;
@@ -18,12 +11,25 @@
   padding: 0.5rem;
 }
 
+.product__body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  column-gap: 0.5rem;
+  height: 230px;
+  padding: 1rem;
+}
+
+.product__price {
+  color: var(--blue);
+  font-weight: bold;
+}
+
 .product__name {
   font-size: 1rem;
 }
 
 .product__description {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   color: rgb(109, 109, 109);
   font-size: 0.9rem;
 }

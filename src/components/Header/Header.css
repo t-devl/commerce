@@ -6,7 +6,13 @@
   border-bottom: 1px solid rgb(202, 202, 202);
 }
 
+.header__link {
+  color: black;
+  text-decoration: none;
+}
+
 .header__basket-button {
+  position: relative;
   display: flex;
   align-items: baseline;
   border: none;
@@ -18,4 +24,18 @@
 .header__basket-icon {
   margin-right: 0.1rem;
   font-size: 1.25rem;
+}
+
+.header__basket-quantity {
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem 0.4rem;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: white;
+  font-size: 0.75rem;
 }
