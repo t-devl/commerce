@@ -1,0 +1,21 @@
+.payment__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.payment__title::after {
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.form__payment-card {
+  margin-bottom: 1rem;
+}

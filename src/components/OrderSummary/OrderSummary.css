@@ -1,0 +1,43 @@
+.order-summary {
+  margin-bottom: 1rem;
+}
+
+.order-summary__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.order-summary__title::after {
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.order-summary__item,
+.order-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item,
+.order-summary__total {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.item__quantity {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.order-summary__total {
+  font-weight: bold;
+}

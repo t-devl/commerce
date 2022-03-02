@@ -1,13 +1,11 @@
-import Commerce from "@chec/commerce.js";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { commerce } from "./lib/commerce";
 import Basket from "./components/Basket/Basket";
 import Checkout from "./components/Checkout/Checkout";
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
-
-const commerce = new Commerce(process.env.REACT_APP_CHEC_PUBLIC_KEY, true);
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -40,6 +38,10 @@ function App() {
     commerce.cart.remove(lineItemId).then((res) => setBasket(res.cart));
   }
 
+  function captureCheckout() {
+    commerce.cart.refresh().then((res) => setBasket(res));
+  }
+
   return (
     <Router>
       <div className="App">
@@ -60,7 +62,12 @@ function App() {
               />
             }
           />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route
+            path="/checkout"
+            element={
+              <Checkout basket={basket} captureCheckout={captureCheckout} />
+            }
+          />
         </Routes>
       </div>
     </Router>
