@@ -7,6 +7,7 @@ import {
   ElementsConsumer,
 } from "@stripe/react-stripe-js";
 import OrderSummary from "../OrderSummary/OrderSummary";
+import { useNavigate } from "react-router-dom";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
@@ -16,6 +17,8 @@ export default function Payment({
   captureCheckout,
   previousStep,
 }) {
+  const history = useNavigate();
+
   function handleSubmit(e, elements, stripe) {
     e.preventDefault();
 
@@ -58,6 +61,8 @@ export default function Payment({
           };
 
           captureCheckout(checkoutToken.id, orderData);
+          previousStep();
+          history("/confirmation");
         }
       });
   }

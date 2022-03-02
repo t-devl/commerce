@@ -6,6 +6,7 @@ import Basket from "./components/Basket/Basket";
 import Checkout from "./components/Checkout/Checkout";
 import Header from "./components/Header/Header";
 import Products from "./components/Products/Products";
+import Confirmation from "./components/Confirmation/Confirmation";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -68,6 +69,7 @@ function App() {
               <Checkout basket={basket} captureCheckout={captureCheckout} />
             }
           />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </div>
     </Router>

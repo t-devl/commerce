@@ -1,0 +1,11 @@
+.confirmation {
+  text-align: center;
+}
+
+.confirmation__message {
+  margin: 2rem 0;
+}
+
+.confirmation__link {
+  color: black;
+}

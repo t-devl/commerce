@@ -6,7 +6,7 @@ export default function OrderSummary({ checkoutToken }) {
     <div className="order-summary">
       <h2 className="order-summary__title">Order Summary</h2>
       {checkoutToken.live.line_items.map((item) => (
-        <div className="order-summary__item item">
+        <div className="order-summary__item item" key={item.id}>
           <div className="item__info">
             <span className="item__name">{item.name}</span>
             <p className="item__quantity">Quantity: {item.quantity}</p>
