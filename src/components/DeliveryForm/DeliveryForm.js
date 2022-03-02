@@ -31,11 +31,19 @@ export default function DeliveryForm({ checkoutToken, handleDeliveryForm }) {
   }
 
   useEffect(() => {
-    getShippingSubdivisions(checkoutToken.id, shippingCountry);
+    if (shippingCountry) {
+      getShippingSubdivisions(checkoutToken.id, shippingCountry);
+    }
   }, [shippingCountry]);
 
   useEffect(() => {
-    getShippingOptions(checkoutToken.id, shippingCountry, shippingSubdivision);
+    if (shippingSubdivision) {
+      getShippingOptions(
+        checkoutToken.id,
+        shippingCountry,
+        shippingSubdivision
+      );
+    }
   }, [shippingSubdivision]);
 
   function getShippingSubdivisions(checkoutTokenId, countryCode) {

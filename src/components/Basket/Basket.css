@@ -1,51 +1,41 @@
 .basket {
-  display: inline-block;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .basket__header {
-  display: flex;
+  display: none;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgb(219, 219, 219);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.basket__header > div:nth-of-type(1),
-.basket__row > div:nth-of-type(1) {
-  width: 375px;
-}
-
-.basket__header > div:nth-of-type(2),
-.basket__row > div:nth-of-type(2) {
-  width: 75px;
-}
-
-.basket__header > div:nth-of-type(3),
-.basket__row > div:nth-of-type(3) {
-  width: 100px;
-}
-
-.basket__header div,
-.row div {
-  margin: 0 1rem;
+.row > div {
+  margin: 0.25rem 0;
 }
 
 .row__product {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .row__image-container {
-  width: 75px;
+  max-width: 75px;
+  margin-bottom: 0.25rem;
 }
 
 .row__image {
   display: block;
   width: 100%;
+}
+
+.row__price {
+  display: none;
 }
 
 .quantity__button {
@@ -93,4 +83,82 @@
   font-size: 13.3333px;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (min-width: 650px) {
+  .basket {
+    display: inline-block;
+  }
+
+  .basket__header {
+    display: flex;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    text-align: left;
+  }
+
+  .basket__header > div:nth-of-type(1),
+  .basket__row > div:nth-of-type(1) {
+    width: 250px;
+  }
+
+  .basket__header > div:nth-of-type(2),
+  .basket__row > div:nth-of-type(2) {
+    width: 75px;
+  }
+
+  .basket__header > div:nth-of-type(3),
+  .basket__row > div:nth-of-type(3) {
+    width: 90px;
+  }
+
+  .basket__header > div:nth-of-type(4),
+  .basket__row > div:nth-of-type(4) {
+    width: 80px;
+  }
+
+  .basket__header div,
+  .row div {
+    margin: 0 0.5rem;
+  }
+
+  .row__product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .row__image-container {
+    flex: 1;
+    max-width: 50px;
+  }
+
+  .row__name {
+    flex: 1;
+  }
+
+  .row__price {
+    display: block;
+  }
+}
+
+@media (min-width: 880px) {
+  .basket {
+    padding: 1rem;
+  }
+
+  .basket__header > div:nth-of-type(1),
+  .basket__row > div:nth-of-type(1) {
+    width: 375px;
+  }
+
+  .basket__header > div:nth-of-type(3),
+  .basket__row > div:nth-of-type(3) {
+    width: 100px;
+  }
 }

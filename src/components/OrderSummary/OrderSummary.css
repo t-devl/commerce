@@ -38,6 +38,10 @@
   font-size: 0.8rem;
 }
 
+.item__price {
+  margin-left: 1.5rem;
+}
+
 .order-summary__total {
   font-weight: bold;
 }
