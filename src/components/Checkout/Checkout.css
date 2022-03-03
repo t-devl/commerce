@@ -50,6 +50,10 @@
   background-color: rgb(202, 202, 202);
 }
 
+.checkout__step-bar--active {
+  background-color: var(--blue);
+}
+
 .checkout__body {
   max-width: 350px;
 }

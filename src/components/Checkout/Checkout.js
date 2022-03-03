@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import { commerce } from "../../lib/commerce";
 import DeliveryForm from "../DeliveryForm/DeliveryForm";
@@ -32,13 +34,23 @@ export default function Checkout({ basket, captureCheckout }) {
       <div className="checkout__stepper">
         <div className="checkout__step">
           <div className="checkout__step-number checkout__step-number--active">
-            1
+            {step > 0 ? <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon> : 1}
           </div>
           <div className="checkout__step-name">Delivery address</div>
         </div>
-        <div className="checkout__step-bar"></div>
+        <div
+          className={`checkout__step-bar ${
+            step > 0 ? "checkout__step-bar--active" : ""
+          }`}
+        ></div>
         <div className="checkout__step">
-          <div className="checkout__step-number">2</div>
+          <div
+            className={`checkout__step-number ${
+              step === 1 ? "checkout__step-number--active" : ""
+            }`}
+          >
+            2
+          </div>
           <div className="checkout__step-name">Payment method</div>
         </div>
       </div>
